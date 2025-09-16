@@ -1,0 +1,372 @@
+/* AI Post Corrector Plugin Styles */
+
+/* Meta Box Styling */
+.aic-metabox {
+    padding: 10px 0;
+}
+
+.aic-metabox p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 13px;
+}
+
+/* Botões de ação */
+.aic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.aic-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f7f7f7;
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.aic-action-btn:hover {
+    background: #e7e7e7;
+    border-color: #999;
+    color: #000;
+}
+
+.aic-action-btn:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 1px;
+}
+
+.aic-action-btn.button-primary {
+    background: #0073aa;
+    border-color: #0073aa;
+    color: #fff;
+}
+
+.aic-action-btn.button-primary:hover {
+    background: #005a87;
+    border-color: #005a87;
+    color: #fff;
+}
+
+/* Botão de gerar título com destaque especial */
+.aic-action-btn[data-action="generate_title"] {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: #fff;
+    font-weight: 500;
+}
+
+.aic-action-btn[data-action="generate_title"]:hover {
+    background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+    border-color: #5a6fd8;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.aic-action-btn[data-action="generate_title"] .dashicons {
+    font-size: 16px;
+}
+
+.aic-action-btn:active {
+    transform: translateY(0);
+}
+
+.aic-action-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.aic-action-btn .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Status Area */
+.aic-status-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 20px;
+}
+
+#aic-status {
+    font-size: 12px;
+    margin: 0;
+    flex: 1;
+}
+
+#aic-status.aic-success {
+    color: #46b450;
+}
+
+#aic-status.aic-error {
+    color: #dc3232;
+}
+
+#aic-status.aic-info {
+    color: #0073aa;
+}
+
+/* Spinner */
+#aic-spinner {
+    margin: 0;
+}
+
+/* Modal Styles */
+.aic-modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.aic-modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 1000px;
+    max-height: 80vh;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: aic-modal-appear 0.3s ease-out;
+}
+
+@keyframes aic-modal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.aic-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.aic-modal-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.aic-modal-close {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.2s ease;
+}
+
+.aic-modal-close:hover {
+    color: #333;
+}
+
+.aic-modal-body {
+    padding: 25px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.aic-comparison-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.aic-original,
+.aic-corrected {
+    display: flex;
+    flex-direction: column;
+}
+
+.aic-original h3,
+.aic-corrected h3 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.aic-original h3 {
+    color: #d63638;
+}
+
+.aic-corrected h3 {
+    color: #00a32a;
+}
+
+.aic-content-box {
+    background-color: #f8f9fa;
+    border: 1px solid #e1e5e9;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 13px;
+    line-height: 1.6;
+    min-height: 200px;
+    overflow-y: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.aic-original .aic-content-box {
+    border-left: 4px solid #d63638;
+}
+
+.aic-corrected .aic-content-box {
+    border-left: 4px solid #00a32a;
+}
+
+.aic-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 20px 25px;
+    border-top: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .aic-modal-content {
+        width: 95%;
+        margin: 2% auto;
+        max-height: 95vh;
+    }
+    
+    .aic-comparison-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .aic-modal-header,
+    .aic-modal-body,
+    .aic-modal-footer {
+        padding: 15px 20px;
+    }
+}
+
+/* Settings Page Styles */
+.aic-info-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f1f1;
+    border-left: 4px solid #0073aa;
+    border-radius: 0 4px 4px 0;
+}
+
+.aic-info-box h3 {
+    margin-top: 0;
+    color: #0073aa;
+}
+
+.aic-info-box ul {
+    margin-bottom: 0;
+}
+
+.aic-info-box li {
+    margin-bottom: 8px;
+}
+
+.aic-info-box a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.aic-info-box a:hover {
+    text-decoration: underline;
+}
+
+/* Form Styling */
+.form-table th {
+    width: 200px;
+}
+
+.form-table input[type="password"],
+.form-table select {
+    width: 300px;
+}
+
+.description {
+    font-style: italic;
+    color: #666;
+}
+
+/* Loading Animation */
+@keyframes aic-pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.aic-action-btn:disabled {
+    animation: aic-pulse 1.5s ease-in-out infinite;
+}
+
+/* Accessibility Improvements */
+.aic-action-btn:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+.aic-modal-close:focus {
+    outline: 2px solid #0073aa;
+    outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .aic-content-box {
+        border-width: 2px;
+    }
+    
+    .aic-modal-content {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .aic-action-btn,
+    .aic-modal-content,
+    .aic-modal-close {
+        transition: none;
+        animation: none;
+    }
+    
+    .aic-action-btn:hover {
+        transform: none;
+    }
+}
