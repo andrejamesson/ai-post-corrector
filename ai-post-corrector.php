@@ -3,7 +3,7 @@
  * Plugin Name:       AI Post Corrector
  * Plugin URI:        https://github.com/andrejamesson/ai-post-corrector
  * Description:       Usa IA para corrigir a gramática e o estilo dos posts do WordPress.
- * Version:           1.2
+ * Version:           1.3
  * Author:            André Jamesson
  * Text Domain:       ai-post-corrector
  * GitHub Plugin URI: andrejamesson/ai-post-corrector
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Define constantes do plugin
 define( 'AIC_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'AIC_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-define( 'AIC_VERSION', '1.2' );
+define( 'AIC_VERSION', '1.3' );
 
 /**
  * Classe principal do plugin
