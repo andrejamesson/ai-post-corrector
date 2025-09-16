@@ -266,10 +266,10 @@ class AI_Post_Corrector {
      * Gerar título usando OpenAI
      */
     private function generate_title_openai( $content ) {
-        $api_key = get_option( 'aic_openai_api_key' );
+        $api_key = get_option( 'aic_api_key' );
         
         if ( empty( $api_key ) ) {
-            throw new Exception( 'Chave da API OpenAI não configurada' );
+            throw new Exception( 'Chave da API OpenAI não configurada. Vá em Configurações > AI Post Corrector para configurar.' );
         }
 
         $prompt = "Com base no seguinte conteúdo, gere um título atrativo, claro e otimizado para SEO. O título deve ter entre 40-60 caracteres e capturar a essência do texto:\n\n" . $content;
@@ -321,10 +321,10 @@ class AI_Post_Corrector {
      * Gerar título usando Google Gemini
      */
     private function generate_title_gemini( $content ) {
-        $api_key = get_option( 'aic_gemini_api_key' );
+        $api_key = get_option( 'aic_api_key' );
         
         if ( empty( $api_key ) ) {
-            throw new Exception( 'Chave da API Google Gemini não configurada' );
+            throw new Exception( 'Chave da API Google Gemini não configurada. Vá em Configurações > AI Post Corrector para configurar.' );
         }
 
         $prompt = "Com base no seguinte conteúdo, gere um título atrativo, claro e otimizado para SEO. O título deve ter entre 40-60 caracteres e capturar a essência do texto:\n\n" . $content;
